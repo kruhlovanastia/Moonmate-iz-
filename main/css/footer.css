@@ -1,0 +1,291 @@
+/* =========================================
+   FOOTER.CSS - Стилі для підвалу сайту
+   ========================================= */
+
+.footer {
+    position: relative;
+    padding: 40px 24px;
+    background-color: #150717;
+    border-top: 2px solid #3a0e3c;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo {
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.footer-logo img {
+    height: 95px;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-info {
+    flex: 1 1 auto;
+    max-width: none;
+    margin-right: 260px;
+    font-size: 12px;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+.footer-info strong {
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-contacts {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-top: 15px;
+}
+
+.author-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.author-block p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.footer-arch-img {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    height: 135px;
+    width: auto;
+    opacity: 0.9;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Стилі для соціальних мереж */
+.social-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 0, 160, 0.3);
+    color: #e0b0e0;
+    transition: all 0.3s ease;
+}
+
+/* Іконки всередині */
+.social-links svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Ефект при наведенні */
+.social-links a:hover {
+    background-color: var(--accent-pink, #ff00a0);
+    border-color: var(--accent-pink, #ff00a0);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 0, 160, 0.4);
+}
+
+/* =========================================
+   АДАПТИВ ФУТЕРА (ПЛАНШЕТ ТА ТЕЛЕФОН)
+   ========================================= */
+/* Планшети */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 32px 24px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px 36px;
+        padding-right: 175px; 
+    }
+
+    .footer-logo {
+        flex-shrink: 0;
+    }
+
+    .footer-logo img {
+        height: 58px;
+        max-height: 100%;
+    }
+
+    .footer-info {
+        flex: 1 1 320px;
+        max-width: none;
+        margin-right: 0;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .footer-info strong {
+        font-size: 13.5px;
+        margin-bottom: 6px;
+    }
+
+    .footer-contacts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 12px;
+    }
+
+    .author-block {
+        gap: 6px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-links svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .footer-arch-img {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        height: 115px;
+        width: auto;
+        max-width: none;
+        opacity: 0.9;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+/* Телефони */
+@media (max-width: 767px) {
+    .footer {
+        padding: 28px 16px 78px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 16px;
+    }
+
+    .footer-logo img {
+        height: 56px;
+        max-height: 100%;
+    }
+
+    .footer-info {
+        display: block !important;
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .footer-info p {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .footer-info strong {
+        font-size: 12.5px;
+        margin-bottom: 6px;
+    }
+
+    .footer-contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .author-block {
+        flex: 1 1 0;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-links a {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-links svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .footer-arch-img {
+        position: absolute !important;
+        right: 0;
+        bottom: 0;
+        height: 68px;
+        width: auto;
+        max-width: 85%;
+        opacity: 0.9;
+        z-index: 1;
+        pointer-events: none;
+    }
+}

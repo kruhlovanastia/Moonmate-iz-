@@ -1,0 +1,635 @@
+/* =========================================
+   ГОЛОВНИЙ ЕКРАН (СЦЕНА З FIGMA + ТЕКСТ ПОВЕРХ)
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    padding-bottom: 70px;
+    background-color: #271324;
+}
+
+.hero-picture {
+    display: block;
+    width: 100%;
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: auto; 
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-overlay * {
+    pointer-events: auto;
+}
+
+/* --- Текст для ПК --- */
+.hero-title {
+    position: absolute;
+    top: 18%;          
+    left: 50%;         
+    transform: translate(-50%, -50%);
+    max-width: 650px;
+    margin: 0;
+    font-family: 'Great Vibes', var(--font-heading), cursive;
+    font-weight: 400;
+    font-size: 72px;
+    font-style: normal;
+    line-height: 1.2;
+    text-align: center;
+    color: #1a061b;
+}
+
+.hero-story {
+    position: absolute;
+    transform: translateY(180px);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 4% 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.hero-story h2 {
+    font-family: 'Great Vibes', var(--font-heading), cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    width: auto;
+    margin: 0;
+    text-align: left;
+}
+
+.hero-story h2 em {
+    color: #FC0FC0;
+}
+
+.hero-story p {
+    width: 72%;
+    margin-left: auto;
+    margin-right: 0;
+    align-self: flex-end;
+    font-size: 32px;
+    font-family: 'Pattaya', var(--font-body), sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   АДАПТИВ ТЕКСТУ ПІД ПЛАНШЕТ ТА ТЕЛЕФОН
+   ========================================= */
+
+/* Планшети */
+@media (max-width: 1024px) {
+    .hero {
+        background-color: #000000;
+        overflow: visible;
+        padding-bottom: 45px;
+    }
+
+    .hero-title {
+        top: 20%;      
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        font-size: 52px;
+        text-align: center;
+    }
+
+    .hero-story {
+        padding: 0 30px 4%;
+        transform: translateY(10px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .hero-story h2 {
+        font-size: 44px;
+        width: auto;
+        text-align: left;
+    }
+
+    .hero-story p {
+        font-size: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: 0;
+        align-self: flex-end;
+        text-align: center;
+    }
+}
+/* Телефони */
+@media (max-width: 767px) {
+
+    .hero {
+        background-color: #000000;
+        overflow: visible;
+        padding-bottom: 65px; 
+    }
+
+    .hero-title {
+        top: 28%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .hero-story {
+        padding: 0 15px 4%;
+        transform: translateY(50px);
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero-story h2 {
+        font-size: 28px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-story p {
+        font-size: 13px;
+        width: 100%;
+        margin: 0 auto;
+        align-self: center;
+        text-align: center;
+    }
+}
+/* =========================================
+   ІНФОРМАЦІЙНІ БЛОКИ ТА ЛОКАЛЬНИЙ ГРАДІЄНТ (ПК)
+   ========================================= */
+
+.info-blocks-section {
+    font-family: 'Montserrat Alternates', var(--font-heading), var(--font-body), sans-serif;
+    background: linear-gradient(180deg, #271424 0%, #6B3061 15%, #6B3061 100%);
+    padding: 60px 20px;
+}
+
+.info-blocks-section .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 90px auto 0;
+}
+
+/* Загальний стиль карток: чорний колір із прозорістю 48% */
+.info-card {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.48);
+    border-radius: 35px;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* --- Перша картка (з Буддою) --- */
+.card-buddha {
+    flex-direction: row;
+}
+
+.card-buddha .card-content {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card-buddha h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.card-subtitle {
+    font-size: 20px;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.card-buddha .btn-register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 40px;
+    background-color: #FC0FC0;
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-buddha .btn-register:hover {
+    transform: scale(1.05);
+    background-color: #FC0FC0;
+}
+
+.buddha-img img {
+    max-width: 220px;
+    height: auto;
+    display: block;
+}
+
+/* --- Друга картка (з Ганешою) --- */
+.card-ganesha {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.ganesha-img img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.card-ganesha .card-content {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-quote {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.sub-quote {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.pink-text {
+    color: #FC0FC0;
+}
+
+
+/* =========================================
+   АДАПТИВНІСТЬ ТА ЗМІНА ГРАДІЄНТА ДЛЯ ПЛАНШЕТІВ І ТЕЛЕФОНІВ
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .info-blocks-section {
+        background: linear-gradient(180deg, #000000 0%, #6B3061 8%, #6B3061 100%);
+        padding: 36px 24px;
+    }
+
+    .info-card {
+        flex-direction: column-reverse !important;
+        text-align: center;
+        padding: 32px 24px;
+        gap: 24px;
+        border-radius: 25px;
+    }
+
+    .card-buddha {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        margin-top: 40px;
+        gap: 12px;
+    }
+
+    .card-buddha .card-content {
+        order: 1;
+        flex: 1 1 62%;
+        max-width: 62%;
+        align-items: flex-start;
+    }
+
+    .card-buddha .buddha-img {
+        order: 2;
+        flex: 0 0 200px;
+        width: 200px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .card-buddha .buddha-img img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 0 0 auto;
+        display: block;
+    }
+
+    .card-buddha h2 {
+        font-size: 38px;
+        line-height: 1.15;
+        text-align: left;
+    }
+
+    .card-subtitle {
+        font-size: 25px;
+        line-height: 1.35;
+        text-align: left;
+    }
+
+    .card-buddha .btn-register {
+        order: 3;
+        flex: 0 0 100%;
+        width: fit-content;
+        align-self: center;
+        margin: 14px auto 0;
+        padding: 12px 26px;
+        font-size: 16px;
+    }
+
+    .card-ganesha {
+        display: block !important;
+        text-align: left;
+    }
+
+    .card-ganesha .card-content {
+        display: block;
+        max-width: 100%;
+    }
+
+    .card-ganesha .main-quote,
+    .card-ganesha .sub-quote {
+        text-align: left;
+    }
+
+    .card-ganesha .ganesha-img {
+        float: left;
+        margin: 8px 18px 6px 0;
+        width: 35%;
+    }
+
+    .card-ganesha .ganesha-img img {
+        width: 100%;
+        max-width: 175px;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+    .main-quote, .sub-quote {
+        font-size: 23px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .ganesha-img img {
+        max-width: 175px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .info-blocks-section {
+        background: linear-gradient(180deg, #000000 0%, #6B3061 6%, #6B3061 100%);
+        padding: 30px 15px;
+    }
+
+    .info-card {
+        flex-direction: column-reverse !important;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+        border-radius: 25px;
+    }
+
+    .card-buddha {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between;
+        text-align: left;
+        margin-top: 45px;
+        gap: 10px;
+    }
+
+    .card-buddha .card-content {
+        max-width: 58%;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    .card-buddha h2 {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .card-subtitle {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .card-buddha .btn-register {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .card-buddha .buddha-img {
+        width: 40%;
+        flex-shrink: 0;
+        align-self: center !important;
+        margin-top: 0 !important;
+    }
+
+    .card-buddha .buddha-img img {
+        max-width: 125px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        transform: translate(-12px, -20px);
+    }
+
+    .card-ganesha {
+        display: block !important;
+        text-align: left;
+    }
+
+    .card-ganesha .card-content {
+        display: block;
+        max-width: 100%;
+    }
+
+    .card-ganesha .main-quote,
+    .card-ganesha .sub-quote {
+        text-align: left;
+    }
+
+    .card-ganesha .ganesha-img {
+        float: left;
+        margin: 8px 14px 4px 0;
+        width: 42%;
+    }
+
+    .card-ganesha .ganesha-img img {
+        width: 100%;
+        max-width: 145px;
+        height: auto;
+        margin: 0;
+        display: block;
+    }
+
+    .main-quote, .sub-quote {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .ganesha-img img {
+        max-width: 140px;
+        margin: 0 auto;
+    }
+}
+
+/* =========================================
+   СІТКА ТА СТИЛІ КАРТОК (FEATURES CARDS)
+   ========================================= */
+
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    position: relative;
+    z-index: 3;
+    margin-top: 50px;
+}
+
+.card {
+    background: #FC0FC0;
+    padding: 30px 15px;
+    border-radius: 45px; 
+    text-align: center;
+    border: 4px solid #ffffff;
+    box-shadow: inset 0 0 0 3px #ffffff, 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: calc(20% - 12px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 45px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card h3 {
+    font-family: 'Montserrat Alternates';
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.card p {
+    font-family: 'Montserrat Alternates';
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ffe6f9;
+    margin: 0;
+}
+
+/* Адаптивність карток для планшетів та телефонів */
+@media (max-width: 1024px) {
+    .cards-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+    .card {
+        width: calc(33.333% - 15px);
+    }
+}
+
+@media (max-width: 767px) {
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .card {
+        width: 100%;
+        min-height: auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        padding: 12px 18px;
+        border-radius: 50px;
+        background-color: #FC0FC0;
+        border: 3px solid #ffffff;
+        box-shadow: inset 0 0 0 2px #ffffff, 0 5px 15px rgba(0, 0, 0, 0.3);
+        column-gap: 14px;
+        row-gap: 2px;
+    }
+
+    .card img {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        height: 44px;
+        width: auto;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .card h3 {
+        grid-column: 2;
+        grid-row: 1;
+        font-family: var(--font-body);
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+    }
+
+    .card p {
+        grid-column: 2;
+        grid-row: 2;
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 1.3;
+        text-align: center;
+        margin: 0;
+    }
+}

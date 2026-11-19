@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonmate — Мій Профіль</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../main/css/reset.css">
+    <link rel="stylesheet" href="../main/css/base.css">
+    <link rel="stylesheet" href="../main/css/header.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../main/css/media.css">
+</head>
+<body>
+
+    <!-- ================= ШАПКА (HEADER) ================= -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../main/index.html" class="logo">
+                <img src="../main/img/Group 22.png" alt="Moonmate">
+            </a>
+
+            <nav class="nav-menu" id="mobile-menu">
+                <a href="../main/index.html" class="nav-link">Головна</a>
+                <a href="../search/search.html#why" class="nav-link">Знайти пару</a>
+                <a href="profile2.html" class="nav-link active">Профіль</a>
+                <a href="../main/main.html#about" class="nav-link">Про нас</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-btn" aria-label="Відкрити меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= ОСНОВНИЙ КОНТЕНТ ПРОФІЛЮ ================= -->
+    <main class="profile-page">
+        <div class="profile-bg"></div>
+        
+        <div class="profile-container">
+            <div class="profile-card">
+                
+                <!-- Ліва частина: Аватар (2 перших фото з реєстрації) -->
+                <div class="profile-avatar-section">
+                    <div class="avatar-wrapper">
+                        <!-- Перше фото -->
+                        <img src="../main/img/Rectangle 46.png" alt="Аватар" class="avatar-img default-avatar" id="avatarDefault">
+                        <!-- Друге фото (з'являється при наведенні) -->
+                        <img src="../main/img/Rectangle 46 (1).png" alt="Друге фото" class="avatar-img hover-avatar" id="avatarHover">
+                    </div>
+                </div>
+
+                <!-- Права частина: Інформація -->
+                <div class="profile-info-section">
+                    
+                    <!-- Ім'я та стать -->
+                    <div class="profile-name-row">
+                        <h1 class="profile-name" id="profileName">Ім'я користувача</h1>
+                        <img src="../main/img/Group 42.png" alt="Стать" class="gender-icon" id="genderIcon">
+                    </div>
+
+                    <!-- Деталі -->
+                    <div class="profile-details">
+                        <p class="detail-item">
+                            <img src="../main/img/Group 40.png" alt="Локація" class="detail-icon">
+                            Місто: <span id="profileCity">Київ</span>
+                        </p>
+                        <p class="detail-item"><span id="profileAge">20</span> років</p>
+                        <p class="detail-item">Фаза місяця: <strong id="profileMoon">Повня</strong></p>
+                    </div>
+
+                    <!-- Блок "Який тип стосунків шукаєте" (вищий квадратик) -->
+                    <div class="info-box pink-box">
+                        <p id="profileLooking">Тип стосунків...</p>
+                    </div>
+
+                    <!-- Блок "Про себе" -->
+                    <h2 class="section-subtitle">Про себе</h2>
+                    <div class="info-box pink-box">
+                        <p id="profileAbout">Інформація про себе...</p>
+                    </div>
+
+                    <!-- Кнопки -->
+                    <div class="profile-actions">
+                        <button class="btn btn-register btn-action" id="editBtn">Редагувати</button>
+                        <button class="btn btn-register btn-action" id="logoutBtn" style="margin-left: 10px; background-color: #6B3061;">Вийти</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="profile2.js"></script>
+</body>
+</html>
